@@ -1,0 +1,14 @@
+.buTTon {
+  background: #f78962;
+  color: antiquewhite;
+}
+.Search {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background: #ebe3e3;
+  color: rgb(135, 135, 135);
+}

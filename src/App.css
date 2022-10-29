@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  background: url("../public/img/Leaves.png");
+  background-size: cover;
+}
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  background: #ebe3e3;
+  color: rgb(135, 135, 135);
+}
+.App h1 {
+  text-align: center;
+}
