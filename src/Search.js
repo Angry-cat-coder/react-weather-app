@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Search.css";
 
 export default function Search() {
@@ -10,7 +11,15 @@ export default function Search() {
     if (city.trim().length === 0) {
       setSentence("");
     } else {
-      setSentence(` It is current 25 ℃ in ${city}`);
+      let apiKey = "712149961fc69177944e721143a58b42";
+      let units = "metric";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+      axios.get(apiUrl).then(showResponse);
+      function showResponse(response) {
+        setSentence(
+          ` in ${city} is current  ${Math.round(response.data.main.temp)}℃ `
+        );
+      }
     }
   }
 
