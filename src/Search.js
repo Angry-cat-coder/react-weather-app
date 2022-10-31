@@ -13,7 +13,7 @@ export default function Search() {
     } else {
       let apiKey = "712149961fc69177944e721143a58b42";
       let units = "metric";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}&lang=en_ua`;
       axios.get(apiUrl).then(showResponse);
       function showResponse(response) {
         setSentence(
