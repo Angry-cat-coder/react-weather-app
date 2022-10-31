@@ -17,7 +17,7 @@ export default function Search() {
       axios.get(apiUrl).then(showResponse);
       function showResponse(response) {
         setSentence(
-          ` in ${response.data.name} is current  ${Math.round(
+          ` In ${response.data.name} is current  ${Math.round(
             response.data.main.temp
           )}℃ `
         );
