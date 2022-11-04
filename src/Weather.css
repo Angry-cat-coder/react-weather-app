@@ -1,10 +1,11 @@
-.Forecast .Picture {
-  font-size: 35px;
+.Weather h1 {
+  font-size: 28px;
+  font-weight: 100;
 }
-.Forecast .Day {
-  color: black;
+.Weather ul {
+  list-style: none;
 }
-.Forecast {
+.Weather {
   font-family: Arial, Helvetica, sans-serif;
   max-width: 600px;
   margin: 30px auto;
@@ -13,4 +14,7 @@
   border-radius: 5px;
   background: #ebe3e3;
   color: rgb(135, 135, 135);
+}
+.Weather .temperature {
+  font-size: 28px;
 }
