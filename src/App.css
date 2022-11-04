@@ -2,3 +2,6 @@ body {
   background: url("../public/img/Leaves.png");
   background-size: cover;
 }
+.App {
+  color: rgb(135, 135, 135);
+}

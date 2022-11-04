@@ -33,7 +33,7 @@ export default function Search() {
     <div className="Search">
       <form className="search-form" onSubmit={searchCity}>
         <div className="row">
-          <div className="col-sm-8">
+          <div className="col-sm-6">
             <input
               type="search"
               onChange={handleCity}
@@ -42,8 +42,11 @@ export default function Search() {
               className="form-control"
             />
           </div>
-          <div className="col-4">
+          <div className="col-sm-3">
             <input type="submit" value="Go" className="btn  w-100 buTTon" />
+          </div>
+          <div className="col-3 Geo">
+            <input type="submit" value="Geolocation" className="btn buT" />
           </div>
         </div>{" "}
         <br />
