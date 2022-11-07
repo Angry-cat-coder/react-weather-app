@@ -50,7 +50,7 @@ export default function Search() {
         <div className="col-sm-3">
           <input type="submit" value="Go" className="btn  w-100 buTTon" />
         </div>
-        <div className="col-3 Geo">
+        <div className="col-sm Geo">
           <input type="submit" value="Geolocation" className="btn buT" />
         </div>
       </div>{" "}
@@ -60,7 +60,12 @@ export default function Search() {
 
   if (status === false) {
     searChing();
-    return <div className="Search"> Searching for A city ....</div>;
+    return (
+      <div className="Search">
+        {" "}
+        Searching for a city .... or internet-connection
+      </div>
+    );
   } else {
     return (
       <div>
