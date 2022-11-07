@@ -1,27 +1,25 @@
 import React from "react";
-import Search from "./Search";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   return (
     <div className="Weather">
-      <Search />{" "}
       <ul>
-        <h1>Kyiv</h1>
+        <h1>{props.data.cityName}</h1>
         <li>Last updated: Thursday 19:45</li>
         <li>4. November</li>
-        <li>Cloudy</li>
+        <li>{props.data.description}</li>
       </ul>
       <div className="row current">
         <div className="col-sm-6">
           <div className="d-flex justify-content-start">
             <img
               src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-              alt="Mostly cloudy"
+              alt={props.data.description}
               className="me-2"
             />{" "}
             <span>
-              <span className="temperature "> 9</span>
+              <span className="temperature "> {props.data.temp}</span>
               <span className="unit">
                 {" "}
                 <a href="/">℃ </a>| <a href="/">℉°</a>
@@ -32,9 +30,9 @@ export default function Weather() {
 
         <div className="col-sm-6 conditions">
           <ul>
-            <li> Humidity:%</li>
-            <li> Precipitation:%</li>
-            <li> Windspeed:%</li>
+            <li> Humidity: {props.data.humidity} %</li>
+
+            <li> Windspeed: {props.data.wind}%</li>
           </ul>
         </div>
       </div>{" "}
