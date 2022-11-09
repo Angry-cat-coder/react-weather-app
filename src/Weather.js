@@ -1,4 +1,5 @@
 import React from "react";
+import Formatteddate from "./Formatteddate";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -8,13 +9,13 @@ export default function Weather(props) {
         <ul>
           <h1>{props.data.cityName}</h1>
           <li>
-            <span className="last">Last updated:</span> Thursday 19:45
+            <Formatteddate current_date={props.data.date} />
           </li>
-          <li>4. November</li>
+
           <li>{props.data.description}</li>
           <li> Humidity: {props.data.humidity} %</li>
 
-          <li> Windspeed: {props.data.wind}%</li>
+          <li> Windspeed: {props.data.wind} km/h</li>
         </ul>
 
         <div className="d-flex align-items-center">
