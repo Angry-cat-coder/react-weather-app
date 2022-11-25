@@ -30,8 +30,10 @@ li::first-letter {
   font-size: 55px;
   line-height: 1;
 }
-.Weather img {
-  width: 65px;
+.Weather canvas {
+  width: 55px;
+  margin-left: 15px;
+  margin-right: 5px;
   display: inline-block;
 }
 
@@ -43,16 +45,17 @@ li::first-letter {
 }
 .Weather .unit a {
   text-decoration: none;
+  color: #f78962;
 }
 
 @media (max-width: 900px) {
   .Weather .temperature {
     font-size: 35px;
   }
-  .Weather img {
-    width: 35px;
+  .Weather canvas {
+    width: 30px;
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 10px;
   }
   .Weather .unit {
     position: relative;
