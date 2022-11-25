@@ -23,7 +23,7 @@ export default function Weather(props) {
             <img
               src={props.data.icon}
               alt={props.data.description}
-              className="me-2 float-start"
+              className="float-start"
             />{" "}
             <span className=" current float-start">
               <span className="temperature ">
