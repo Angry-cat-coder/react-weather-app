@@ -21,7 +21,7 @@ export default function Weather(props) {
         <div className="d-flex align-items-center">
           <div className="clearfix">
             <img
-              src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+              src={props.data.icon}
               alt={props.data.description}
               className="me-2 float-start"
             />{" "}
