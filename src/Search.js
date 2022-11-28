@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Weather from "./Weather";
+import Forecast from "./Forecast";
 import "./Search.css";
 
 export default function Search() {
@@ -71,7 +72,8 @@ export default function Search() {
     return (
       <div>
         {" "}
-        <div className="Search">{form}</div> <Weather data={weatherDate} />
+        <div className="Search">{form}</div> <Weather data={weatherDate} />{" "}
+        <Forecast />
       </div>
     );
   }

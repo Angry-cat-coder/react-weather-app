@@ -1,5 +1,6 @@
 import React from "react";
 import "./Forecast.css";
+import Weathericon from "./Weathericon";
 
 export default function Forecast() {
   return (
@@ -13,7 +14,9 @@ export default function Forecast() {
         <div className="col-2">Sat </div>
       </div>
       <div className="row Picture">
-        <div className="col-2">☀ </div>
+        <div className="col-2">
+          <Weathericon codeicon={"01d"} size={30} />{" "}
+        </div>
         <div className="col-2">🌦 </div>
         <div className="col-2">🌨 </div>
         <div className="col-2">☁ </div>
