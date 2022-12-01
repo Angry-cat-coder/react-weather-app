@@ -1,8 +1,21 @@
 import React from "react";
 import "./Forecast.css";
 import Weathericon from "./Weathericon";
+import axios from "axios";
 
 export default function Forecast() {
+  function showResponse(response) {
+    console.log(response.data);
+  }
+  //function searChing() {
+  let lat = 70;
+  let lon = 74;
+  let apiKey = "712149961fc69177944e721143a58b42";
+  let units = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showResponse);
+  // }
+
   return (
     <div className="Forecast">
       <div className="row">
