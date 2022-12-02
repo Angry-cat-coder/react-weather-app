@@ -3,13 +3,13 @@ import "./Forecast.css";
 import Weathericon from "./Weathericon";
 import axios from "axios";
 
-export default function Forecast() {
+export default function Forecast(props) {
   function showResponse(response) {
     console.log(response.data);
   }
   //function searChing() {
-  let lat = 70;
-  let lon = 74;
+  let lat = props.coords.lat;
+  let lon = props.coords.lon;
   let apiKey = "712149961fc69177944e721143a58b42";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=${units}`;

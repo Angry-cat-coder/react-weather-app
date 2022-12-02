@@ -12,6 +12,7 @@ export default function Search() {
   function showResponse(response) {
     setweatherDate({
       cityName: response.data.name,
+      coords: response.data.coord,
       temp: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -73,7 +74,7 @@ export default function Search() {
       <div>
         {" "}
         <div className="Search">{form}</div> <Weather data={weatherDate} />{" "}
-        <Forecast />
+        <Forecast coords={weatherDate.coords} />
       </div>
     );
   }
