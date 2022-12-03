@@ -23,13 +23,17 @@ export default function Forecast(props) {
   } else console.log(forecastDate[0]);
   return (
     <div className="Forecast">
-      {forecastDate.map(function (daily, index) {
-        return (
-          <div key={index}>
-            <Forecastday data={daily} />;
-          </div>
-        );
-      })}
+      <div className="row">
+        {forecastDate.map(function (daily, index) {
+          if (index < 5) {
+            return (
+              <div className="col" key={index}>
+                <Forecastday data={daily} />;
+              </div>
+            );
+          } else return null;
+        })}
+      </div>
     </div>
   );
 }
