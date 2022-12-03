@@ -2,10 +2,17 @@ import React from "react";
 import Weathericon from "./Weathericon";
 
 export default function Forecastday(props) {
+  function setDay() {
+    let days = ["Sun", "Mon", "Tues", "Wed", "Thur", "Fri", "Sat"];
+    let data = new Date();
+    let day = days[data.getDay()];
+    return day;
+  }
+
   return (
     <div className="Forecastday">
       <div className="row">
-        <div className="col-2">{props.data.dt} </div>
+        <div className="col-2">{setDay()} </div>
       </div>
       <div className="row Picture">
         <div className="col-2">
@@ -14,8 +21,8 @@ export default function Forecastday(props) {
       </div>
       <div className="row Temp">
         <div className="col-2">
-          <span className="Day">{props.data.temp.max}</span>
-          {props.data.temp.min}
+          <span className="Day">{Math.round(props.data.temp.max)}°</span>
+          {Math.round(props.data.temp.min)}°
         </div>
       </div>{" "}
     </div>

@@ -23,7 +23,13 @@ export default function Forecast(props) {
   } else console.log(forecastDate[0]);
   return (
     <div className="Forecast">
-      <Forecastday data={forecastDate[0]} />
+      {forecastDate.map(function (daily, index) {
+        return (
+          <div key={index}>
+            <Forecastday data={daily} />;
+          </div>
+        );
+      })}
     </div>
   );
 }
