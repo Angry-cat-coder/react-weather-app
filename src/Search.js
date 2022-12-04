@@ -40,8 +40,6 @@ export default function Search() {
   }
 
   function showPosition(position) {
-    //console.log(position);
-
     let lat = position.coords.latitude;
     let lon = position.coords.longitude;
 
