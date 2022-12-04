@@ -38,6 +38,22 @@ export default function Search() {
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}&lang=en_ua`;
     axios.get(apiUrl).then(showResponse);
   }
+
+  function showPosition(position) {
+    //console.log(position);
+
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    let apiKey = "a2c12ca339db823fd39c58b7ef7264d1";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(showResponse);
+  }
+  function geoLocation() {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  }
+
   let form = (
     <form className="search-form" onSubmit={searchCity}>
       <div className="row">
@@ -54,7 +70,12 @@ export default function Search() {
           <input type="submit" value="Go" className="btn  w-100 buTTon" />
         </div>
         <div className="col-sm Geo">
-          <input type="submit" value="Geolocation" className="btn buT" />
+          <input
+            type="submit"
+            value="Geolocation"
+            className="btn buT"
+            onClick={geoLocation}
+          />
         </div>
       </div>{" "}
       <br />
